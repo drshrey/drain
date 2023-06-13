@@ -26,11 +26,11 @@ type LogCluster struct {
 	size              int
 }
 
-func (c *LogCluster) getTemplate() string {
+func (c *LogCluster) GetTemplate() string {
 	return strings.Join(c.logTemplateTokens, " ")
 }
 func (c *LogCluster) String() string {
-	return fmt.Sprintf("id={%d} : size={%d} : %s", c.id, c.size, c.getTemplate())
+	return fmt.Sprintf("id={%d} : size={%d} : %s", c.id, c.size, c.GetTemplate())
 }
 
 func createLogClusterCache(maxSize int) *LogClusterCache {
